@@ -1,0 +1,82 @@
+What is closure?
+-Closures is chunk of code that can be passed around and can be used in code whenever needed. 
+-It is like Blocks in Objective-C.
+-Closures are reference types.
+- Closures can capture and Store references to any constants or variables from the context in which they are defined.
+
+what are the kinds of closure?
+- Functions are special kinds of closures. There are three kinds of closures:
+Global Functions
+Nested Functions
+Closure Functions
+
+How to declare closure?
+  {() -> return type in 
+   statements
+  }
+ 
+Does Closures have default values to any parameter?
+ -No, Closures can use inout parameters, but cannot assign default values to any parameters. Also closure parameters cannot have external names.
+
+
+What is high order functions in swift?
+- High order functions is a function that does takes a function as input and/or outputs a a functions.
+
+What are the important high order functions implemented for arrays?
+-Map
+-Filter
+-Reduce
+
+what is Map?
+- Map transforms an array using a function. 
+Ex:-
+var numbers = [1, 2, 3]
+
+var strings: [String] = []
+
+for number in numbers {
+    strings.append("\(number)")
+}
+The other way of solving this problem is by using map:
+
+var numbers = [1, 2, 3]
+
+var strings = numbers.map { "\($0)" }
+{ "\($0)" } is the closure we provided to solve this problem. It takes one parameter and converts it into a string using string interpolation.
+
+What is Filter?
+-Filter selects the elements of an array which satisfy a certain condition.
+
+For example let’s remove all the odd numbers from an array:
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
+var evenNumbers = numbers.filter { $0 % 2 == 0 }
+// evenNumbers = [2, 4, 6, 8]
+Or remove all the even numbers:
+
+var oddNumbers = numbers.filter { $0 % 2 == 1 }
+// oddNumbers = [1, 3, 5, 7]
+
+Whatis Reduce?
+-Reduce combines all the values from an array into a single value.
+
+For example we can reduce an array of numbers to their sum.
+
+var numbers = [1, 2, 3, 4, 5]
+
+var sum = numbers.reduce(0) { $0 + $1 } // 15
+   Reduce take two parameters, an initial value and a closure that will be used to combine the elements of the array. The closure provided to reduce takes two parameters, the first one is the partial result and the second one will be an element from the array. The closure will be called for each element once. In the sum example we started the sum from 0 and the closure added the partial sum with each element.
+
+
+
+
+
+
+
+
+
+
+
+
+
