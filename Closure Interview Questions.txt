@@ -1,3 +1,5 @@
+04/16/2018
+
 What is closure?
 -Closures is chunk of code that can be passed around and can be used in code whenever needed. 
 -It is like Blocks in Objective-C.
