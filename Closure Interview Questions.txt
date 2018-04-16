@@ -71,6 +71,7 @@ var sum = numbers.reduce(0) { $0 + $1 } // 15
    Reduce take two parameters, an initial value and a closure that will be used to combine the elements of the array. The closure provided to reduce takes two parameters, the first one is the partial result and the second one will be an element from the array. The closure will be called for each element once. In the sum example we started the sum from 0 and the closure added the partial sum with each element.
 
 
+04/17/2018
 
 
 
